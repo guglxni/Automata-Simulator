@@ -1,0 +1,291 @@
+body {
+	font-family: sans-serif;
+	height: 100%;
+	margin: 0;
+}
+
+#container {
+	min-height: 100%;
+	position: relative;
+}
+
+#wrapper {
+	display: table;
+	height: 100%;
+	width: 100%;
+}
+
+#wrapper > .row {
+	display: table-row;
+}
+
+#sidebar {
+	border-right: 1px solid black;
+	width: 20%;
+}
+
+#sidebar > :last-child:not(:empty) {
+	margin-bottom: 2em;
+}
+
+#sidebar_content {
+	height: 100%;
+	overflow-y: scroll;
+}
+
+#mainbar {
+	padding: 5px;
+}
+
+#sidebar, #mainbar {
+	display: table-cell;
+	vertical-align: top;
+}
+
+#footer {
+	background-color: white;
+	border-top: 1px solid black;
+	bottom: 0;
+	height: 2em;
+	position: absolute;
+	text-align: center;
+	width: 100%;
+}
+
+svg {
+	margin: -5px;
+}
+
+.menu .menu_arrow {
+	display: inline-block;
+	float: right;
+}
+
+.menu .title {
+	background-color: #428bca;
+	border-bottom: 1px solid #2070a0;
+	color: white;
+	padding: 5px;
+	padding-right: 10px;
+}
+
+.menu .title:hover {
+	cursor: pointer;
+}
+
+.menu .content {
+	padding: 5px;
+	text-align: center;
+}
+
+.menu .content table {
+	margin: 0 auto;
+}
+
+.menu .content table td {
+	text-align: center;
+}
+
+.menu .content span.property_value {
+	font-weight: bold;
+}
+
+.menu .content input.property_value {
+	width: 50px;
+	text-align: center;
+}
+
+.menu .content input[type="button"].change_property {
+	margin-left: 20px;
+}
+
+.menu:hover {
+	background-color: #FF8;
+}
+
+.machine_selection_btn {
+	width: 100%;
+}
+
+.machine_selection_btn:disabled {
+	color: green;
+}
+
+.file_manip_btn:not(:last-child) {
+	margin-right: 5px;
+}
+
+div.row {
+	margin-bottom: 5px;
+}
+
+.image_button {
+	cursor: pointer;
+	max-height: 32px;
+	max-width: 32px;
+	margin-right: 5px;
+	vertical-align: middle;
+}
+
+.image_button.disabled {
+	cursor: default;
+	opacity: 0.5;
+}
+
+#system_prompt {
+	background-color: #DDD;
+	border-bottom: 1px solid black;
+	margin: -5px;
+	padding: 5px;
+	position: relative;
+	z-index: 3;
+}
+
+#system_prompt.floating {
+	border: 1px solid black;
+	display: inline-block;
+	position: absolute;
+}
+
+#system_prompt input, #system_prompt select {
+	margin-right: 5px;
+	text-align: center;
+	width: 100px;
+}
+
+#system_prompt input:last-child, #system_prompt select:last-child {
+	margin-right: 0;
+}
+
+#system_prompt .invalid {
+	border: 2px solid red;
+}
+
+.click_blocker {
+	background-color: #DDD;
+	height: 100%;
+	opacity: 0.6;
+	position: absolute;
+	width: 100%;
+	z-index: 2;
+}
+
+#file_selector {
+	display: none;
+}
+
+#recognition_progress {
+	background-color: #DDD;
+	font-size: 300%;
+	margin-left: -5px;
+	margin-right: -5px;
+	margin-top: 5px;
+	overflow: hidden;
+	padding: 5px;
+	text-overflow: ellipsis;
+}
+
+#recognition_progress .parsed_input {
+	color: green;
+}
+
+#recognition_progress .acceptance_status_suffix {
+	display: block;
+	font-size: 50%;
+}
+
+#stack, #action_tree {
+	word-wrap: break-word;
+}
+
+#stack:not(.none) {
+	font-size: 200%;
+	word-break: break-all;
+}
+
+#stack > .top {
+	color: blue;
+	text-decoration: underline;
+}
+
+#action_tree:not(.none) .entry td {
+	background-color: white;
+	border: 1px solid black;
+	padding: 5px;
+	word-wrap: break-word;
+}
+
+#action_tree .entry:not(:last-child) {
+	opacity: 0.5;
+}
+
+#action_tree .entry:last-child tr td:first-child {
+	background-color: #DDD;
+}
+
+#action_tree .empty tr td:last-child {
+	word-break: break-all;
+}
+
+#tape {
+	background-color: #DDD;
+	border-collapse: collapse;
+	display: table;
+	font-family: courier;
+	font-size: 300%;
+	margin-top: 5px;
+	padding: 5px;
+	width: 100%;
+}
+
+.tape_cell {
+	border: 1px solid black;
+	display: table-cell;
+}
+
+.tape_cell.center {
+	background-color: #FFFF80;
+}
+
+.tape_pointer {
+	text-decoration: underline;
+}
+
+.none {
+	color: #888;
+	font-style: italic;
+}
+
+#machine_actions input[type="button"], #operation_list input[type="button"] {
+	width: 100%;
+}
+
+#transition_table td {
+	background-color: white;
+	border: 1px solid black;
+	cursor: pointer;
+	padding: 5px;
+}
+
+#transition_table tr:first-child td {
+	background-color: #DDD;
+}
+
+#multiple_recognition {
+	display: table;
+}
+
+#multiple_recognition > * {
+	display: table-cell;
+	font-family: sans-serif;
+	font-size: 16px;
+	vertical-align: top;
+}
+
+#multiple_recognition > *:first-child {
+	margin-right: 5px;
+}
+
+#multiple_recognition span {
+	display: block;
+}
